@@ -1,0 +1,25 @@
+name: Split Duplicate Merged Files
+description: Split Scenes that have duplicate files
+version: 0.1
+url: 
+exec:
+ - "/.venv/Scripts/python"
+ - "{pluginDir}/split.py"
+ - api
+interface: raw
+tasks:
+  - name: Setup tags
+    description: Setup scene ignore tag
+    defaultArgs:
+      mode: setup
+  - name: Remove tags
+    description: Remove the tag used by plugin
+    defaultArgs:
+      mode: remove_tags
+  - name: Split scenes
+    description: Split Scenes that have duplicate files
+    defaultArgs:
+      mode: split_all
+
+
+
